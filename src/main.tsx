@@ -15,7 +15,7 @@ export const { useAccount, useCoState } = Jazz;
 
 function JazzAndAuth({ children }: { children: React.ReactNode }) {
   const [auth, authState] = useDemoAuth();
-  console.log(authState, JSON.parse(JSON.stringify(authState)));
+
   return (
     <>
       <Jazz.Provider

@@ -12,6 +12,7 @@ const Pixel: FC<Props> = ({ color, onMouseDown }) => {
       className="pixel"
       onMouseDown={onMouseDown}
       onTouchStart={onMouseDown}
+      onTouchMove={onMouseDown}
       onMouseEnter={() => window.mouseDown && onMouseDown()}
     ></div>
   );
