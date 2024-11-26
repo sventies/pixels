@@ -75,7 +75,9 @@ function App() {
           </div>
         ))}
       </div>
-      <button onClick={create}>Create</button>
+      <button style={{ marginTop: 10 }} onClick={create}>
+        Create
+      </button>
       <div className="colors">
         {COLORS.map((color) => (
           <div
