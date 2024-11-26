@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "jazz-react": "^0.8.32",
+    "jazz-tools": "^0.8.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -1,22 +1,18 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 
 interface Props {
-  drawingColor: string;
+  color: string;
+  onMouseDown: () => void;
 }
 
-const Pixel: FC<Props> = ({ drawingColor }) => {
-  const [color, setColor] = useState("white");
+const Pixel: FC<Props> = ({ color, onMouseDown }) => {
   return (
     <div
-      //
       style={{ background: color }}
       className="pixel"
-      onMouseDown={() => setColor(drawingColor)}
-      onMouseEnter={() => {
-        if (window.mouseDown) {
-          setColor(drawingColor);
-        }
-      }}
+      onMouseDown={onMouseDown}
+      onTouchStart={onMouseDown}
+      onMouseEnter={() => window.mouseDown && onMouseDown()}
     ></div>
   );
 };
