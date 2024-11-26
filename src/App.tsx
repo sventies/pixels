@@ -45,7 +45,7 @@ function App() {
             key={color}
             className="pixel"
             style={{
-              borderBottom: "none",
+              border: color === drawingColor ? "2px solid #08f" : "2px solid transparent",
               background: color,
             }}
             onClick={() => {

@@ -6,12 +6,27 @@
 }
 
 .pixel {
-  /* background-color: #f00;  */
-  width: calc(90vw / 40);
-  height: calc(90vw / 40);
+  width: min(calc(90vw / 40), 15px);
+  height: min(calc(90vw / 40), 15px);
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
+  cursor: pointer;  
+  
 }
+
+.pixel:hover {
+    /* background-color: #000; */
+    opacity: 0.5;
+    /* position: absolute; */
+    /* width: min(calc(90vw / 40 - 1), 14px);
+    height: min(calc(90vw / 40 - 1), 14px);
+    border: 1px solid #08f; */
+    /* transform: translateX(-2px); */
+  }
+
+  .grid {
+    background-color: #888;
+  }
 
 .row {
   display: flex;
