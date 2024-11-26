@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.pixel {
+  /* background-color: #f00;  */
+  width: calc(90vw / 40);
+  height: calc(90vw / 40);
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
