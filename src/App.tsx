@@ -25,6 +25,14 @@ document.body.onmouseup = function () {
   window.mouseDown = false;
 };
 
+document.addEventListener(
+  "touchmove",
+  function (e) {
+    e.preventDefault();
+  },
+  { passive: false }
+);
+
 const COLORS = ["white", "black", "tomato"];
 
 const getWhiteRow = () => Array.from({ length: nx }, () => "white") as ColorList;
