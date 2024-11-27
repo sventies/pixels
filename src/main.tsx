@@ -2,13 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import {
-  createJazzReactApp,
-  DemoAuthBasicUI,
-  useDemoAuth,
-  // DemoAuthBasicUI
-} from "jazz-react";
-// import { BrowserDemoAuth } from "jazz-browser";
+import { createJazzReactApp, DemoAuthBasicUI, useDemoAuth } from "jazz-react";
 
 const Jazz = createJazzReactApp();
 export const { useAccount, useCoState } = Jazz;
@@ -43,6 +37,15 @@ function JazzAndAuth({ children }: { children: React.ReactNode }) {
     </>
   );
 }
+
+document.addEventListener(
+  "touchmove",
+  function (e) {
+    e.preventDefault();
+  },
+  { passive: false }
+);
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <JazzAndAuth>

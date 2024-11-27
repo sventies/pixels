@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+*{ touch-action: none; } 
+
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+body {
+  position: relative
+}
+
 .pixel {
   width: min(calc(90vw / 40), 15px);
   height: min(calc(90vw / 40), 15px);
@@ -15,13 +26,7 @@
 }
 
 .pixel:hover {
-    /* background-color: #000; */
     opacity: 0.5;
-    /* position: absolute; */
-    /* width: min(calc(90vw / 40 - 1), 14px);
-    height: min(calc(90vw / 40 - 1), 14px);
-    border: 1px solid #08f; */
-    /* transform: translateX(-2px); */
   }
 
   .grid {

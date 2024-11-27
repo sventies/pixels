@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 
 interface Props {
   color: string;
@@ -6,6 +6,27 @@ interface Props {
 }
 
 const Pixel: FC<Props> = ({ color, onMouseDown }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const div = ref.current;
+    div?.addEventListener("pointerdown", (e) => {
+      // console.log("down");
+      onMouseDown();
+      // div.style.background = "green";
+      // console.log("attempt release implicit capture");
+      div.releasePointerCapture(e.pointerId); // <- Important!
+    });
+    div?.addEventListener("pointerenter", () => {
+      onMouseDown();
+      // console.log("enter");
+      // div.style.background = "yellow";
+    });
+    div?.addEventListener("pointerleave", () => {
+      // console.log("leave");
+      // div.style.background = "gray";
+    });
+  }, [onMouseDown]);
+
   return (
     <div
       style={{ background: color }}
