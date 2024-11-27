@@ -13,7 +13,7 @@ const Pixel: FC<Props> = ({ color, onMouseDown }) => {
       // console.log("down");
       onMouseDown();
       // div.style.background = "green";
-      // console.log("attempt release implicit capture");
+      // console.log("attexmpt release implicit capture");
       div.releasePointerCapture(e.pointerId); // <- Important!
     });
     div?.addEventListener("pointerenter", () => {
@@ -21,19 +21,20 @@ const Pixel: FC<Props> = ({ color, onMouseDown }) => {
       // console.log("enter");
       // div.style.background = "yellow";
     });
-    div?.addEventListener("pointerleave", () => {
-      // console.log("leave");
-      // div.style.background = "gray";
-    });
-  }, [onMouseDown]);
+    // div?.addEventListener("pointerleave", () => {
+    //   // console.log("leave");
+    //   // div.style.background = "gray";
+    // });
+  }, []);
 
   return (
     <div
+      ref={ref}
       style={{ background: color }}
       className="pixel"
       onMouseDown={onMouseDown}
-      onTouchStart={onMouseDown}
-      onTouchMove={onMouseDown}
+      // onTouchStart={onMouseDown}
+      // onTouchMove={onMouseDown}
       onMouseEnter={() => window.mouseDown && onMouseDown()}
     ></div>
   );
