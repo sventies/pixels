@@ -35,7 +35,7 @@ const Pixel: FC<Props> = ({ color, onMouseDown }) => {
       onMouseDown={onMouseDown}
       // onTouchStart={onMouseDown}
       // onTouchMove={onMouseDown}
-      onMouseEnter={() => window.mouseDown && onMouseDown()}
+      // onMouseEnter={() => window.mouseDown && onMouseDown()}
     ></div>
   );
 };
