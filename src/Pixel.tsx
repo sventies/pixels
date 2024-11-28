@@ -21,10 +21,10 @@ const Pixel: FC<Props> = ({ color, onMouseDown }) => {
       // console.log("enter");
       // div.style.background = "yellow";
     });
-    // div?.addEventListener("pointerleave", () => {
-    //   // console.log("leave");
-    //   // div.style.background = "gray";
-    // });
+    div?.addEventListener("pointerleave", () => {
+      // console.log("leave");
+      // div.style.background = "gray";
+    });
   }, []);
 
   return (

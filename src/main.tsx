@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { createJazzReactApp, DemoAuthBasicUI, useDemoAuth } from "jazz-react";
+import InfiniteCanvas from "./InfiniteCanvas";
 
 const Jazz = createJazzReactApp();
 export const { useAccount, useCoState } = Jazz;
@@ -48,8 +49,9 @@ document.addEventListener(
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <JazzAndAuth>
+    <InfiniteCanvas />
+    {/* <JazzAndAuth>
       <App />
-    </JazzAndAuth>
+    </JazzAndAuth> */}
   </React.StrictMode>
 );
